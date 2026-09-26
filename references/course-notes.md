@@ -156,7 +156,7 @@ Temporary removal takes ~2–3 h and lasts 6 months. Permanent removal needs the
 ## Class 17: robots.txt
 
 - It's the first file a bot requests, at root only. Syntax: `User-agent`, `Disallow`, `Allow`.
-- Course: when Allow and Disallow both apply, Google takes the least restrictive (Allow). **Docs say:** the most specific (longest path) rule wins; Allow only wins ties.
+- When Allow and Disallow both match, the most specific (longest path) rule wins. Least restrictive (Allow) only wins a tie between rules of equal length.
 - Don't Disallow a page to deindex it; use noindex and leave it crawlable.
 - A 404 robots.txt means crawl everything; a 5xx means Google stops crawling.
 
@@ -186,7 +186,7 @@ It's a hidden file in `public_html` (turn on Show Hidden Files). Uses: server-le
 - Product: name, image, brand, SKU, offers (price, availability), aggregateRating.
 - Article/NewsArticle for posts.
 - Breadcrumb: the course says to leave out the homepage and start at the first category.
-- The course's "supercharging" tip is to put extra keywords in the schema `description`. **Docs say:** structured data must reflect visible content, and mismatches risk a manual action. Avoid it.
+- Structured data must reflect visible page content. Don't add keywords to schema fields that aren't on the page; mismatches risk a manual action (see Class 26).
 - Tools: technicalseo.com to generate, the Rich Results Test to validate, and "Schema & Structured Data for WP" or `header.php` to implement.
 
 ## Class 26: Enhancement reports

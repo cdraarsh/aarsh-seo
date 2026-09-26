@@ -55,7 +55,7 @@ robots.txt returning 404 → Google crawls everything; 5xx → Google stops craw
 | `X-Robots-Tag` header | Same, for non-HTML (PDFs, images) | Set via .htaccess |
 | canonical | Preferred URL among duplicates | Hint; self-referencing canonical on every page |
 
-robots.txt precedence, per the course: Allow wins when both match. **⚠ Docs say:** the most specific (longest) matching rule wins; least-restrictive (Allow) only breaks ties of equal length.
+robots.txt precedence: when Allow and Disallow both match, the most specific (longest) rule wins. Least restrictive (Allow) only breaks a tie between rules of equal length.
 
 ## Benchmarks
 
@@ -113,7 +113,7 @@ Intents: navigational · informational · commercial · transactional. Start wit
 ### Schema
 JSON-LD in `<head>`. Organization (+ `sameAs` for socials/directories → knowledge graph), LocalBusiness (exact NAP, add `areaServed`/`founder`), Product (name, image, brand, sku, offers, aggregateRating), Article/NewsArticle, Breadcrumb. Generate with technicalseo.com, test with the Rich Results Test, monitor under GSC Enhancements (Invalid = no rich result; Valid with warnings = eligible).
 - Course: breadcrumb list starts at the first category, not the homepage.
-- Course: inject extra keywords into schema `description` because bots read it and humans don't. **⚠ Docs say:** structured data must match visible page content. Mismatches can earn a manual action (the course's own Class 26 point). Don't do this for clients.
+- Schema must match what's visible on the page. Never stuff extra keywords into `description` or any other field; a mismatch can earn a manual action (Class 26).
 
 ### Core Web Vitals fixes
 - **LCP:** preload the LCP image, never lazy-load it, WebP, cut TTFB, split huge text blocks.
