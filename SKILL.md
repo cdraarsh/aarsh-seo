@@ -7,7 +7,7 @@ description: Aarsh's own SEO methodology, distilled from his Advanced SEO course
 
 Aarsh's SEO playbook. Answer from this file first; open [references/course-notes.md](references/course-notes.md) for depth (Google's architecture, discovery methods, ranking systems, LLM/RAG, platform setup, schema detail).
 
-Where the course conflicts with Google's official docs, it's flagged **⚠ Docs say**. Follow the docs for client work.
+Where the course and Google's official docs disagree, this skill follows the docs.
 
 ## Mental model: 5 steps
 
